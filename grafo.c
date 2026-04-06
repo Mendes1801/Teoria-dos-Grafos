@@ -6,6 +6,7 @@
 //Gabriel Erick Mendes 10420391
 //Camila Nunes Carniel 10338558
 //BRUNO GERMANETTI RAMALHO 10426491
+// MIGUEL PINEIRO CORATOLO SIMOES 10427085
 
 
 #include <stdio.h>
@@ -406,7 +407,7 @@ int main(int argc, char *argv[])
     //=========================Componentes==============================
     int componentes = componetesGrafo(G, ordemG);
     printf("Quantidade de componentes conexas: %d\n\n", componentes);
-
+    //============================================================
 
     //=========================Vertices de Corte=========================
     int *vCorte = (int *)malloc(ordemG * sizeof(int));
@@ -419,7 +420,7 @@ int main(int argc, char *argv[])
     }
     printf("\n");
     free(vCorte);
-
+    //============================================================
 
     //=========================Arestas de Corte=========================
     int maxArestas = (ordemG * (ordemG - 1)) / 2; 
@@ -436,7 +437,9 @@ int main(int argc, char *argv[])
     
     free(aCorteV1);
     free(aCorteV2);
+    //============================================================
 
+    
     destroiGrafo(&G, ordemG);
 
     printf("Pressione uma tecla para terminar\n");
